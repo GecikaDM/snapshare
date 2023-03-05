@@ -1,5 +1,8 @@
 .face-snap-card {
     width: 35%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     img {
       width: 100%;
     }
