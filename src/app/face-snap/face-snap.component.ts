@@ -11,6 +11,7 @@ export class FaceSnapComponent implements OnInit{
   createDate! : Date;
   snaps! : number;
   imageUrl! : string;
+  buttonText! : string;
 
   ngOnInit() {
     this.title = "Jaycee";
@@ -18,6 +19,17 @@ export class FaceSnapComponent implements OnInit{
     this.createDate = new Date();
     this.snaps = 6;
     this.imageUrl = 'https://cdn.pixabay.com/photo/2016/07/19/04/40/moon-1527501_1280.jpg';
+    this.buttonText = '👍';
+  }
+
+  onLike() {
+    if (this.buttonText === '👍') {
+       this.snaps++;
+       this.buttonText = '👌';
+    } else {
+       this.snaps--;
+       this.buttonText = '👍';
+    }
   }
 }
 

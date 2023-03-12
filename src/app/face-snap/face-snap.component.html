@@ -3,5 +3,5 @@
     <h2>{{ description }}</h2>
         <img [src]="imageUrl" [alt]="title">
             <p>Update on {{ createDate }}</p>
-            <p>👍 {{ snaps }}</p>
+            <button (click)=onLike() class="btn">{{ buttonText}} {{ snaps }}</button>
 </div>
